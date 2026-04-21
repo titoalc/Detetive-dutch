@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://207bvsu6lvy2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t2mkf"]
+
+[sub_resource type="Gradient" id="Gradient_37pbl"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lr6up"]
+gradient = SubResource("Gradient_37pbl")
+fill_to = Vector2(0.6469881, 0.046117757)
+
+[node name="Node2D" type="Node2D" unique_id=456704152]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1248942798]
+material = SubResource("CanvasItemMaterial_t2mkf")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_lr6up")

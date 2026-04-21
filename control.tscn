@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://b0ltxuwmiowiv"]
+
+[ext_resource type="Script" uid="uid://2hwk8bs8mdw2" path="res://scripts/menu_controller.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://bsefwq88pas52" path="res://images/becomIsack.jpg" id="2_62e2m"]
+
+[sub_resource type="SystemFont" id="SystemFont_uchyk"]
+font_names = PackedStringArray("Quorthon IV")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0fbet"]
+line_spacing = 0.0
+font = SubResource("SystemFont_uchyk")
+font_size = 66
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+outline_color = Color(1.4954206, 1.4954206, 1.4954206, 1)
+shadow_size = 25
+shadow_color = Color(0.8563542, 0.8563542, 0.8563542, 0.25882354)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uchyk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fbet"]
+
+[node name="Control" type="Control" unique_id=1898654784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=438252222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1075361566]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -377.0
+offset_top = 2.0000038
+offset_right = 44.0
+offset_bottom = 181.0
+grow_horizontal = 2
+scale = Vector2(1.823778, 2.0581002)
+mouse_filter = 0
+text = "Become
+"
+label_settings = SubResource("LabelSettings_0fbet")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1304213962]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -384.0
+offset_top = 139.0
+offset_right = 37.0
+offset_bottom = 318.0
+grow_horizontal = 2
+scale = Vector2(1.823778, 2.0581002)
+mouse_filter = 0
+text = "Isack
+"
+label_settings = SubResource("LabelSettings_0fbet")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=547814024]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = 48.0
+offset_right = 98.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/separation = 8
+
+[node name="iniciar jogo" type="Button" parent="VBoxContainer" unique_id=1138243130]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.91684705, 0.7966667, 0.4095977, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uchyk")
+action_mode = 0
+text = "iniciar jogo"
+
+[node name="sair do jogo" type="Button" parent="VBoxContainer" unique_id=885830851]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.91764706, 0.79607844, 0.40784314, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0fbet")
+text = "sair do jogo"
+
+[node name="BecomIsack" type="Sprite2D" parent="." unique_id=1730125591]
+position = Vector2(646.00006, 226.00002)
+scale = Vector2(0.55031246, 0.61340207)
+texture = ExtResource("2_62e2m")
+
+[connection signal="pressed" from="VBoxContainer/iniciar jogo" to="." method="_on_iniciar_jogo_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair do jogo" to="." method="_on_sair_do_jogo_pressed"]
