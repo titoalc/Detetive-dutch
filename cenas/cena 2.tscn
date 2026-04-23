@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dnuuknscktfkl"]
 
 [ext_resource type="Script" uid="uid://beultfwotchx5" path="res://scripts/movimento do personagem.gd" id="1_6mo1h"]
-[ext_resource type="Texture2D" uid="uid://dkjj8l7jnk4vu" path="res://sprites/4 Sem Título_20260421044839.png" id="2_6pevq"]
+[ext_resource type="Texture2D" uid="uid://7tibpim8qxxb" path="res://sprites/5 Sem Título_20260423012723.png" id="2_6pevq"]
 [ext_resource type="Texture2D" uid="uid://cep7u2tm8rehv" path="res://tiles/chão assoalho 3.png" id="4_ic435"]
 [ext_resource type="Texture2D" uid="uid://df1lrh3xpn8j3" path="res://tiles/teto2.png" id="5_qm3yn"]
 [ext_resource type="Texture2D" uid="uid://c4tj7100da6bt" path="res://tiles/papel de parede creme.png" id="5_xfwx1"]
@@ -11,15 +11,68 @@
 [ext_resource type="Texture2D" uid="uid://mlbimxeatq03" path="res://tiles/teto1.png" id="8_tmpeu"]
 [ext_resource type="Texture2D" uid="uid://baro4uimtqf25" path="res://tiles/escada.png" id="9_raxwd"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b07p6"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(0, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raxwd"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(664, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brtfe"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(1328, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck0sh"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(1992, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b08ct"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(2656, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ade3m"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(3320, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gj2j"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(3984, 0, 664, 1300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxmv3"]
+atlas = ExtResource("2_6pevq")
+region = Rect2(4648, 0, 664, 1300)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jtpim"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_6pevq")
+"texture": SubResource("AtlasTexture_b07p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raxwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brtfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck0sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b08ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ade3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gj2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxmv3")
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6040"]
@@ -164,6 +217,7 @@ speed = 200.0
 scale = Vector2(0.4401873, 0.4527713)
 sprite_frames = SubResource("SpriteFrames_jtpim")
 autoplay = "default"
+frame_progress = 0.48584923
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=684094450]
 position = Vector2(0, -8.888794)
